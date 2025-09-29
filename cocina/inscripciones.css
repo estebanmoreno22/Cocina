@@ -1,0 +1,153 @@
+:root {
+    --verde-oscuro: #1b5e20;
+    --verde-medio: #388e3c;
+    --verde-claro: #81c784;
+    --blanco: #fff;
+    --gris-claro: #f5f5f5;
+    --gris-oscuro: #333;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gris-claro);
+    color: var(--verde-oscuro);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .logo {
+    max-width: 80px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    background-color: var(--verde-medio);
+    text-align: center;
+    padding: 12px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    color: var(--blanco);
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--verde-claro);
+}
+
+main.inscripcion-container {
+    flex: 1;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(27, 94, 32, 0.3);
+}
+
+.inscripcion-container h2 {
+    text-align: center;
+    color: var(--verde-oscuro);
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.inscripcion-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.inscripcion-form input[type="text"],
+.inscripcion-form input[type="email"],
+.inscripcion-form select,
+.inscripcion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--verde-medio);
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.inscripcion-form input[type="text"]:focus,
+.inscripcion-form input[type="email"]:focus,
+.inscripcion-form select:focus,
+.inscripcion-form textarea:focus {
+    outline: none;
+    border-color: var(--verde-oscuro);
+    box-shadow: 0 0 5px var(--verde-oscuro);
+}
+
+.inscripcion-form button {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.inscripcion-form button:hover {
+    background-color: var(--verde-medio);
+}
+
+footer {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main.inscripcion-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
